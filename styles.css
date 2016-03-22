@@ -20,8 +20,22 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+.dancefloor{
+  position: relative;
+  background-color: #3BFFB5;
+  top:370px;
+  left: 10px;
+  width: 100%;
+  height: 1100px;
+  padding: 10px 125px 30px 125px;
+  transform: skewX(35deg);
+
+}
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  content: url(http://doobix.github.io/subclass-dance-party/img/spongebob.gif);
   position:absolute;
+}
+.deadpool{
+    content: url(http://cloud-3.steamusercontent.com/ugc/418063700264458529/069E18AC7DB401E42559205D6A7A5ADED9C04D0E/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black);
+    position:absolute;
 }
