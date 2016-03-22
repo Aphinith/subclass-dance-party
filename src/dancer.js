@@ -1,34 +1,24 @@
 // Creates and returns a new dancer object that can step
-var makeDancer = function(top, left, timeBetweenSteps){
+var Dancer = function(top, left, timeBetweenSteps){
   this.timeBetweenSteps = timeBetweenSteps;
-  this.count= 0;
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
-  // this.test = function(){ console.log('hi')};
-  //invoke the step method from blinkyDancer
-  
-  // console.log('inside makeDancer after invocation:', this);
-  //invoke setPosition with arguments passed in through its parameters
-  this.setPosition(top, left);
 };
 
-  makeDancer.prototype.step = function(){
+  Dancer.prototype.step = function(){
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
-    var mD = this;
-    
-    console.log('this is mD: ' , this);
+    var mBD = this
+
+    console.log('mD:', this);
 
     //Set the timeout  of the subclass binding 'this' to the subclass with each call  
-    // setTimeout(function() {
-    //   mdThis.step()
-    //   console.log('does it work?', hi);
-    // }, this.timeBetweenSteps);
+    setTimeout(function(){mBD.step()}, this.timeBetweenSteps)
   };
 
   // makeDancer.prototype.step();
 
-  makeDancer.prototype.setPosition = function(top, left){
+  Dancer.prototype.setPosition = function(top, left){
     // Use css top and left properties to position our <span> tag
     // where it belongs on the page. See http://api.jquery.com/css/
     
