@@ -1,9 +1,10 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps){
   makeDancer.call(this, top, left, timeBetweenSteps);
   // this.count = 0;
-  this.test = function(){ console.log('hi')};
+  // this.test = function(){ console.log('hi')};
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
+  this.step();
 };
 
   makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
@@ -15,7 +16,8 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps){
     // this.count++
     // console.log('inside BlinkyDancer:', this);
     //invokes the step method on makeDancer class with 'this' class as the context
-    makeDancer.prototype.step.call(this);
+    var mBD = this;
+    makeDancer.prototype.step.call(mBD);
     //console.log('This is this.step after step.call', this.step);
 
     //sets an interval to ensure the step method is called every second

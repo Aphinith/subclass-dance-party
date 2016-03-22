@@ -6,8 +6,8 @@ var makeDancer = function(top, left, timeBetweenSteps){
   this.$node = $('<span class="dancer"></span>');
   // this.test = function(){ console.log('hi')};
   //invoke the step method from blinkyDancer
-  this.step();
-  console.log('inside makeDancer after invocation:', this);
+  
+  // console.log('inside makeDancer after invocation:', this);
   //invoke setPosition with arguments passed in through its parameters
   this.setPosition(top, left);
 };
@@ -15,19 +15,15 @@ var makeDancer = function(top, left, timeBetweenSteps){
   makeDancer.prototype.step = function(){
     // the basic dancer doesn't do anything interesting at all on each step,
     // it just schedules the next step
+    var mD = this;
+    
+    console.log('this is mD: ' , this);
 
-
-    // create a variable to refer to blinkyDancer this
-    var mdThis = this;
-    // console.log(mdDancer);
-    // console.log('mdThis:', mdThis);
-    // console.log('The value of this before setTimeout', this)
-    // console.log('mdThis.timeBetweenSteps:', mdThis.timeBetweenSteps)
     //Set the timeout  of the subclass binding 'this' to the subclass with each call  
-    setTimeout(function() {
-      mdThis.step()
-      console.log('does it work?', hi);
-    }, this.timeBetweenSteps);
+    // setTimeout(function() {
+    //   mdThis.step()
+    //   console.log('does it work?', hi);
+    // }, this.timeBetweenSteps);
   };
 
   // makeDancer.prototype.step();
