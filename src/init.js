@@ -30,7 +30,7 @@ $(document).ready(function(){
   });
 
   $(".lineup").on("click", function(event) {
-    $(".character").css({'display' : 'block', 'text-align' : 'center'});
+    $("span").css('left','50%');
   })
 
 });
