@@ -27,14 +27,44 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps){
   //inherit properties from Dancer Super Class
   makeBlinkyDancer.call(this, top, left, timeBetweenSteps);
   //invoke makeBlinkyDancer.step below
-  this.$node = $('<span class="deadpool"></span>');
+  this.$node = $('<span class="deadpool character"></span>');
   this.step();
 }; 
 
   Deadpool.prototype = Object.create(makeBlinkyDancer.prototype);
 
 
-var Bananas = new makeBlinkyDancer();
-var SpongeBob = new makeBlinkyDancer();
+var SpongeBob = function(top, left, timeBetweenSteps){
+  //inherit properties from Dancer Super Class
+  makeBlinkyDancer.call(this, top, left, timeBetweenSteps);
+  //invoke makeBlinkyDancer.step below
+  this.$node = $('<span class="spongebob character"></span>');
+  this.step();
+}; 
+
+  SpongeBob.prototype = Object.create(makeBlinkyDancer.prototype);
+
+
+var Bananas = function(top, left, timeBetweenSteps){
+  //inherit properties from Dancer Super Class
+  makeBlinkyDancer.call(this, top, left, timeBetweenSteps);
+  //invoke makeBlinkyDancer.step below
+  this.$node = $('<span class="bananas character"></span>');
+  this.step();
+}; 
+
+  Bananas.prototype = Object.create(makeBlinkyDancer.prototype);
+
+var Rockface = function(top, left, timeBetweenSteps){
+  //inherit properties from Dancer Super Class
+  makeBlinkyDancer.call(this, top, left, timeBetweenSteps);
+  //invoke makeBlinkyDancer.step below
+  this.$node = $('<span class="rockface character"></span>');
+  this.step();
+}; 
+
+  Rockface.prototype = Object.create(makeBlinkyDancer.prototype);
+
+
 
 

@@ -4,7 +4,11 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
+  background-size: 500px 500px;
+  background-image: url(http://hauteliving.com/wp-content/uploads/2015/10/Why-Do-Stars-All-Look-Almost-the-Same-Size-ftr.jpg);
   font-size: 18px;
+  overflow: hidden;
+
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -16,26 +20,64 @@ body, a:link, a:visited, a:active{
 .topbar{
   height:32px;
   background-color: #555;
+  width: 100%;
 }
 .title{
   background-color: #777;
 }
-.dancefloor{
+
+button.lineup{
+  height: 32px;
+  width: 100px;
   position: relative;
-  background-color: #3BFFB5;
-  top:370px;
-  left: 10px;
-  width: 100%;
-  height: 1100px;
-  padding: 10px 125px 30px 125px;
-  transform: skewX(35deg);
+  float: left;
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+
+div.dancefloor{
+
+
+  border-bottom: 900px solid url(http://s627.photobucket.com/user/Princebam_album/media/dance_floor2.gif.html);
+  border-left: 700px solid transparent;
+  border-right: 700px solid transparent;
+  height: 0;
+  width: 900px;
+  position: relative;
+  top: 250px;
+  left: -175px;
+ 
 
 }
+
+div.for-dancers{
+  /*visibility: hidden;*/
+  height: 900px;
+  position: absolute;
+  background-color: #FFFFFF;
+  width: 200px;
+}
+
+/*.characters{
+  display: block;
+}*/
+
 .dancer{
   content: url(http://doobix.github.io/subclass-dance-party/img/spongebob.gif);
   position:absolute;
 }
+
 .deadpool{
     content: url(http://cloud-3.steamusercontent.com/ugc/418063700264458529/069E18AC7DB401E42559205D6A7A5ADED9C04D0E/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black);
     position:absolute;
+}
+
+.bananas{
+  content: url(http://rs1381.pbsrc.com/albums/ah240/Heena_Chhagan/dancing_banana.gif~c200);
+  position:absolute;
+}
+
+.rockface{
+  content: url(http://gifdanceparty.giphy.com/dancers/foreveralone.gif);
+  position:absolute;
 }
